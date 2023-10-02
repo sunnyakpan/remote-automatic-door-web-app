@@ -1,0 +1,166 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	background: #000000;
+    font-family: Arial;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+h1,h2,h3,h4,h5,h6,p,span,a,ul,li,button{
+	position: relative;
+	border:none;
+	outline: none;
+	color: inherit;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+.control_sec{
+	position: relative;
+	width: 400px;
+	background-color: #000000;
+	background-image:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../img/admin-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border:1px solid rgba(255,255,255,0.2);
+	height: 90%;
+}
+
+@media screen and (max-width:500px){
+	.control_sec{
+		width: 100% !important;
+		height: 100% !important;
+		border:none !important;
+	}
+}
+
+.password_sec{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding:10px 20px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 100;
+}
+
+
+
+.password-input{
+	width: 100%;
+	transform: translateY(-30px);
+	opacity: 0;
+	animation:FadeInputIn 1s ease forwards;
+}
+@keyframes FadeInputIn{
+	from{
+		transform: translateY(-30px);
+	opacity: 0;
+	}
+	to{
+		transform: translateY(0%);
+	opacity: 1;
+	}
+}
+.password-input input{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	height: 30px;
+	outline: none;
+	border:none;
+	outline: none;
+	background-color: transparent;
+	border-bottom:1px solid rgba(255,255,255,0.5);
+	color: #ffffff;
+	font-size: 16px;
+
+}
+
+.password-input p{
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-top: 10px;
+}
+
+.password_btns{
+	position: relative;
+	width: 100%;
+	height: auto;
+	transform: translateY(100px);
+	opacity: 0;
+	animation:FadeKeysIn 1s ease forwards;
+}
+@keyframes FadeKeysIn{
+	from{
+		transform: translateY(100px);
+	opacity: 0;
+	}
+	to{
+		transform: translateY(0%);
+	opacity: 1;
+	}
+}
+
+.password_btns ul{
+	position: relative;
+	width: 100%;
+	height: auto;
+	display: flex;
+	align-items: center;
+}
+.password_btns ul li{
+	position: relative;
+	width: 100%;
+	background-color: rgba(255,255,255,0.1);
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+	cursor: pointer;
+	height: 50px;
+	margin: 5px;
+	border-radius: 5px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+	border:1px solid rgba(255,255,255,0.1);
+}
+.password_btns ul li:hover{
+	transform: scale(0.9);
+}
+.password_btns ul li p{
+	font-size: 14px;
+	display: inline-flex;
+	align-items: center;
+	grid-gap: 10px;
+}
+.password_btns ul li span{
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.password_btns ul li span.ok_span{
+	font-size: 15px;
+}
